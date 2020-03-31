@@ -10,7 +10,7 @@ body {
 a,
 button {
     transition: all .3s ease-in-out;
-    outline: none!important;
+    /*outline: none!important;*/
 }
 
 a:hover {
@@ -100,7 +100,8 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    /*color: rgba(255, 255, 255, .7);*/
+    color: rgb(255,255,255);
 }
 
 .d-bloc button:hover {
@@ -460,10 +461,6 @@ nav .caret {
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
-}
-
 .btn-rd {
     border-radius: 40px;
 }
@@ -753,7 +750,8 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    /*background-color: rgba(165, 147, 99, 0.7);*/
+    background-color: rgba(17, 1, 9, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -767,16 +765,19 @@ h4 {
 }
 
 .bgc-dark-slate-blue {
-    background-color: #364577;
+    /*background-color: #364577;*/
+    background-color: rgb(3,6,15);
 }
 
 .bgc-atomic-tangerine {
    /* background-color: #F3976C; */
     background-color: #BB5B38;
+
 }
 
 .tc-white {
-    color: #F3976C!important;
+   /* color: #F3976C!important; */
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
