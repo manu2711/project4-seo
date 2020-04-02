@@ -100,8 +100,8 @@ a:hover {
 }
 
 .d-bloc {
-    /*color: rgba(255, 255, 255, .7);*/
-    color: rgb(255,255,255);
+    color: rgba(255, 255, 255, .7);
+    /*color: rgb(255,255,255);*/
 }
 
 .d-bloc button:hover {
@@ -772,7 +772,6 @@ h4 {
 .bgc-atomic-tangerine {
    /* background-color: #F3976C; */
     background-color: #BB5B38;
-
 }
 
 .tc-white {
@@ -825,7 +824,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("../img/image-de-presentation.bmp");
+    background-image: url("../img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
