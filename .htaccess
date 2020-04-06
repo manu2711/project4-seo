@@ -1,19 +1,24 @@
-ErrorDocument 404 "Hey Zozo, la page n'existe pas !"
-
-# compression avec MOD_DEFLATE
-AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/atom+xml application/rss+xml application/xml application/javascript application/json
-
-# les proxys ne doivent pas décompresser le contenu à la place de l'internaute
-Header append Vary User-Agent env=!dont-vary
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/shtml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule> 
 
 <IfModule mod_headers.c>
-  # Prends en compte les polices (formats récents)
+  # Prends en compte les polices
   AddType application/x-font-woff .woff
   AddType application/x-font-woff2 .woff2
   # active la mise en cache
   ExpiresActive On
   ExpiresDefault "access plus 1800 seconds"
-  # met à 1 an la durée du cache pour les images, le SVG et les polices d’écriture
+  # 1 an la duree du cache pour les images, le SVG et les polices
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
@@ -22,6 +27,6 @@ Header append Vary User-Agent env=!dont-vary
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType application/x-font-woff "access plus 1 year"
   ExpiresByType application/x-font-woff2 "access plus 1 year"
-  # met à 1 mois la durée du cache pour les CSS et JS
+  # 1 mois la duree du cache pour les CSS et JS
   ExpiresByType text/css "access plus 1 month"
 </IfModule>
